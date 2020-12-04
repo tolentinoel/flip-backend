@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+    skip_before_action :verify_authenticity_token
     def index
         users = User.all
         render json: users, except:[:created_at, :updated_at],
@@ -6,7 +7,8 @@ class UsersController < ApplicationController
     end
 
     def create
-        user = User.create(user_params)
+        user = User.find_or_create_by(user_params)
+        render json: user, except:[:created_at, :updated_at]
     end
 
     def show
@@ -17,6 +19,6 @@ class UsersController < ApplicationController
     private
 
     def user_params
-        params.permit(:username)
+        params.permit(:username, :boards)
     end
 end
