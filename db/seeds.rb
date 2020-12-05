@@ -14,4 +14,17 @@ test = ["rocket1", "sugahnugget", "missMonae", "moneyman360"]
     User.create(username: test.sample)
 end
 
-# b1 = Board.create(theme: "Rick and Morty", difficulty: "Easy", score: 0, user_id: 1)
+b1 = Board.create(theme: "Rick and Morty", difficulty: "Easy", score: 0, user_id: 1)
+
+# VECTOR_ICONS = []
+# RM_ICONS = []
+
+# content = File.open("rickandmorty.txt")
+# ram_data = JSON.parse(content.read)
+
+# ram_data["results"].each do |result|
+#     RM_ICONS << result["image"]
+# end
+
+# card_1 = RM_ICONS.sample
+# sample_game1 = []

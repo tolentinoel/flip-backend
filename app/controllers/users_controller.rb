@@ -12,13 +12,14 @@ class UsersController < ApplicationController
     end
 
     def show
-        user = User.find_by(params[:id])
-        render json: user, except:[:created_at, :updated_at]
+        user = User.find_by(id: params[:id])
+        render json: user, except:[:created_at, :updated_at],
+        include:{:boards => {only: [:id, :theme, :difficulty, :score]}}
     end
 
     private
 
     def user_params
-        params.permit(:username, :boards)
+        params.permit(:username, :board_id)
     end
 end
