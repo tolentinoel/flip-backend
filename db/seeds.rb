@@ -14,7 +14,7 @@ test = ["rocket1", "sugahnugget", "missMonae", "moneyman360"]
     User.create(username: test.sample)
 end
 
-b1 = Board.create(theme: "Rick and Morty", difficulty: "Easy", score: 0, user_id: 1)
+b1 = Board.create(theme: "Rick and Morty", difficulty: "Easy", moves: 0, user_id: 1)
 
 # VECTOR_ICONS = []
 # RM_ICONS = []

@@ -3,7 +3,7 @@ class CreateBoards < ActiveRecord::Migration[6.0]
     create_table :boards do |t|
       t.string :theme
       t.string :difficulty
-      t.integer :score
+      t.integer :moves
       t.references :user, null: false, foreign_key: true
 
     

@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2020_12_02_004600) do
   create_table "boards", force: :cascade do |t|
     t.string "theme"
     t.string "difficulty"
-    t.integer "score"
+    t.integer "moves"
     t.integer "user_id", null: false
     t.index ["user_id"], name: "index_boards_on_user_id"
   end
