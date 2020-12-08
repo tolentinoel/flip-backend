@@ -8,23 +8,7 @@
 User.destroy_all
 Board.destroy_all
 
-test = ["rocket1", "sugahnugget", "missMonae", "moneyman360"]
 
-3.times do
-    User.create(username: test.sample)
-end
+user1 = User.create(username: "rocket1")
 
-b1 = Board.create(theme: "Rick and Morty", difficulty: "Easy", moves: 0, user_id: 1)
-
-# VECTOR_ICONS = []
-# RM_ICONS = []
-
-# content = File.open("rickandmorty.txt")
-# ram_data = JSON.parse(content.read)
-
-# ram_data["results"].each do |result|
-#     RM_ICONS << result["image"]
-# end
-
-# card_1 = RM_ICONS.sample
-# sample_game1 = []
+b1 = Board.create(theme: "rickMorty", difficulty: "Easy", moves: 0, user_id: 1)

@@ -6,15 +6,15 @@ class UsersController < ApplicationController
         include:{:boards => {only: [:id, :theme, :difficulty, :moves]}}
     end
 
-    def create
-        user = User.find_or_create_by(user_params)
-        render json: user, except:[:created_at, :updated_at]
-    end
-
     def show
         user = User.find_by(id: params[:id])
         render json: user, except:[:created_at, :updated_at],
         include:{:boards => {only: [:id, :theme, :difficulty, :moves]}}
+    end
+
+    def create
+        user = User.find_or_create_by(username: params[:username])
+        render json: user, except:[:created_at, :updated_at]
     end
 
     private
