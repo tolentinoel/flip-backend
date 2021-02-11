@@ -1,5 +1,4 @@
-# README
-WELCOME TO FLIP!
+# WELCOME TO FLIP!
 
 ### Tech used:
    * ruby '2.6.1'
@@ -7,13 +6,12 @@ WELCOME TO FLIP!
    * CSS
    * HTML5
    * JavaScript
-   
-   
 
+### Setting up
 
-Once you cloned this repo on a folder, please refer to `https://github.com/tolentinoel/flip-frontend`, clone that repo into that main folder as well together with this backend repo.
+    Once you cloned this repo on a folder, please refer to `https://github.com/tolentinoel/flip-frontend`, clone that repo into that main folder as well together with this backend repo.
 
-Once done, cd into flip-backend and link the database by running `rails db:migrate` and `rails db:seed` upon opening the file. Don't forget to run `bundle` or `bundle update` to make sure you have all the dependencies and gems needed(specifically 'rack-cors').
+    Once done, cd into flip-backend and link the database by running `rails db:migrate` and `rails db:seed` upon opening the file. Don't forget to run `bundle` or `bundle update` to make sure you have all the dependencies and gems needed(specifically 'rack-cors').
 
 ### Starting up the game
 
