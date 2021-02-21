@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2020_12_02_004600) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "boards", force: :cascade do |t|
     t.string "theme"
     t.string "difficulty"
